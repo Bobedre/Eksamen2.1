@@ -23,6 +23,8 @@ int of_a_kind(int* hand, int X_of_kind, int number_of_dice);
 int round11(int number_of_dice);
 int round12(int number_of_dice);
 int straight(int* hand, int number_of_dice, int n1, int n2, int n3, int n4, int n5);
+int round13(int number_of_dice);
+int fullHouse(int* hand, int number_of_dice);
 int round14(int number_of_dice);
 int chance(int* hand, int number_of_dice);
 int round15(int number_of_dice);
@@ -351,7 +353,7 @@ int points = 0;
     return 0;
   }
 }
-
+/* Full House: Any set of three combined with a different pair. Score: Sum of all the dice. */
 int round13(int number_of_dice)
 {
 int pointsround13 = 0;
@@ -361,14 +363,17 @@ int pointsround13 = 0;
   printf("\n");
   pointsround13 = fullHouse(hand, number_of_dice);
   return pointsround13;
+}
 
-int fullHouse(int numbe_of_dice)
+
+int fullHouse(int* hand, int number_of_dice)
 {
 
 
 }
 
-/* Full House: Any set of three combined with a different pair. Score: Sum of all the dice. */
+
+/* Chance: Any combination of dice. Score: Sum of all the dice. */
 int round14(int number_of_dice)
 {
 int pointsround14 = 0;
